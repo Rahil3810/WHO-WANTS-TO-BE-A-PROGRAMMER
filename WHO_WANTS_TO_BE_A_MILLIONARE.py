@@ -1,0 +1,35 @@
+#who wants to be a millionare
+
+questions = [["Who was the father of python langauge?", "Jeff Bezos", "Dennis Ritchie", "Guido Van Rossum", "Rasmus Lerdorf", "C"],
+["Who is known as the father of computers", "Alan Turing", "John von Neumann", "Zeev Suraski", "Charles Babbage", "D"],
+["When was python released?", "1991", "1995", "1998", "1990", "A"],
+["Which of these is not an operating system", "Chrome OS", "Android", "Linux", "React OS", "D"],
+["who is known as the worlds first programmer?", "George Boole ", "Samuel Morse",  "Ada Lovelace", "Charles Wheatstone", "C"]]
+
+question_number = [1,2,3,4,5]
+prize_money = [1000, 5000, 20000, 100000, 500000]
+money = 0
+
+for i in range (0, len(questions)):
+    question = questions[i]
+    print(f"Question NO. {question_number[i]}")
+    print(f"Question for RS.{prize_money[i]} ")
+    print(f"A.{question[1]} \nB.{question[2]} \nC.{question[3]} \nD.{question[4]}")
+    reply = input("Enter your answer here A,B,C,D : ").upper()
+    if (reply == question[-1]):
+        print(f"correct answer , you have won RS.{prize_money[i]}")
+        if i == 4:
+            money = 500000
+        if i ==  3:
+            money = 100000
+        if i ==  2:
+            money = 20000  
+        if i ==  1:
+            money = 5000           
+    else:
+        print("wrong answer")
+        break
+
+print(f"CONGRAGULATIONS YOU ARE GOING HOME WITH {money}")
+
+#This is my first project on Github
